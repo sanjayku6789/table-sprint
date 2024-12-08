@@ -1,0 +1,86 @@
+/* Custom navbar styles */
+.custom-navbar {
+  height: 60px; /* Fixed height */
+  background-color: #5C218B; /* Purple background color */
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  z-index: 1000;
+}
+
+  
+  /* Logo text styles */
+  .navbar-brand {
+    color: white; /* White text for logo */
+    font-size: 1.5rem; /* Slightly larger text for the brand */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* No underline */
+  }
+  
+  .navbar-brand:hover {
+    color: #d3d3d3; /* Slight hover effect for logo */
+  }
+  
+  /* User profile image styles */
+  .user-profile .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  /* Modal custom styles */
+  .modal-dialog.modal-sm {
+    max-width: 300px; /* Small modal size */
+  }
+  
+  .modal-content {
+    border-radius: 10px; /* Rounded modal corners */
+  }
+  
+  .modal-header .modal-title {
+    color: #5C218B; /* Matching purple color for modal title */
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .modal-body {
+    text-align: center; /* Center-align the modal text */
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Custom buttons in modal */
+  .custom-btn {
+    background-color: #5C218B; /* Purple button background */
+    color: #fff; /* White text */
+    border-radius: 20px; /* Rounded button shape */
+    padding: 0.5rem 1.5rem;
+    border: none;
+  }
+  .cancel-btn{
+    background-color: white; /* Purple button background */
+    color: black; /* White text */
+    border-radius: 20px; /* Rounded button shape */
+    padding: 0.5rem 1.5rem;
+    border: 2px solid rgb(144, 143, 143);
+   
+  }
+  
+  .custom-btn:hover {
+    background-color: #4a1973; /* Darker purple on hover */
+  } 
+  .cancel-btn:hover {
+    background-color: #e8e7e9; /* Darker purple on hover */
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 10px; /* Space between buttons */
+    border-top: none;
+  }
+  .modal-header {
+    border-bottom: none; /* Removes the bottom border of the header */
+  }

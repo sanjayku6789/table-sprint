@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
+import Login from "./Components/login/Login";
+import ProductList from "./Components/products/ProductList";
+import DashBoard from "./Components/dashboard/DashBoard";
+import NavBar from "./Components/navbar/NavBar";
+import Header from "./Components/header/Header"; // Assuming Header is in Components/header
+import "bootstrap/dist/css/bootstrap.min.css";
+import AddProducts from "./Components/products/addproduct/AddProducts";
+import Category from "./Components/category/Category";
+import AddCategory from "./Components/category/addcategory/AddCategory";
+import SubCategory from "./Components/subcategory/SubCategory";
+import ProductDetails from "./Components/products/viewproduct/ProductDetails";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        {/* Login Route */}
+        <Route path="/" element={<Login />} />
+
+        {/* Protected Routes with Layout */}
+        <Route path="/home" element={<HomeLayout />}>
+          <Route index element={<DashBoard />} />
+          <Route path="products" element={<ProductList />} />
+          <Route path="category" element={<Category />} />
+          <Route path="addcategory" element={<AddCategory />} />
+          <Route path="dashboard" element={<DashBoard />} />
+          <Route path="subcategory" element={<SubCategory />} />
+          <Route path="add-product" element={<AddProducts />} />
+          <Route path="product-details" element={<ProductDetails />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+function HomeLayout() {
+  return (
+    <div className="d-flex flex-column vh-100">
+      <Header />
+
+      <div className="d-flex flex-grow-1">
+        <div className="flex-shrink-0">
+          <NavBar />
+        </div>
+
+        <div className="flex-grow-1 p-3 bg-light">
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;

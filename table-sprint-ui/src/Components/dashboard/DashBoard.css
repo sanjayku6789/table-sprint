@@ -1,0 +1,9 @@
+.dashboard {
+    height: 100%;
+    background-color: #f8f9fa; /* Light background */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    overflow-y: auto; /* Add scroll if content overflows */
+  }
+  

@@ -1,0 +1,38 @@
+.product-header {
+  font-weight: bold;
+  color: #3c3c3c;
+}
+
+.table th {
+  text-align: center;
+  font-size: 14px;
+}
+
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table .text-success {
+  font-weight: bold;
+}
+
+.btn-link {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btn-link i {
+  font-size: 18px;
+}
+
+.btn-primary {
+  background-color: #6f42c1;
+  border-color: #6f42c1;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
