@@ -7,8 +7,8 @@ import axios from "axios";
 
 const Login = () => {
   const [values, setValues] = useState({
-    email: "test@example.com",
-    password: "password",
+    email: "",
+    password: ""
   });
 
   const [message, setMessage] = useState("");
@@ -76,7 +76,7 @@ const Login = () => {
             type="password"
             name="password"
             value={values.password}
-            className="form-control mb-2 mt-2"
+            className="form-control mb-2 mt-4"
             id="password"
             placeholder="Password"
           />
